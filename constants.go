@@ -4,7 +4,7 @@ package main
 
 import (
 	"os"
-	"path"
+	"path/filepath"
 	"time"
 )
 
@@ -29,8 +29,8 @@ func initConstants() (err error) {
 		return
 	}
 
-	caFile = path.Join(xdgConfigDir, "ca.pem")
-	cabakFile = path.Join(xdgConfigDir, "ca.pem.bak")
+	caFile = filepath.Join(xdgConfigDir, "ca.pem")
+	cabakFile = filepath.Join(xdgConfigDir, "ca.pem.bak")
 
 	return
 }
